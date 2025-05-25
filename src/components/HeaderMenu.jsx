@@ -52,7 +52,7 @@ function HeaderMenu() {
       {/* Contact Buttons */}
       <div style={{ display: "flex", gap: "1rem" }}>
         <a
-          href="mailto:yourname@gmail.com"
+          href="mailto:srinadhreddy0524@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           style={{
