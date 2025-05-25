@@ -14,15 +14,15 @@ export default function Intro() {
         flexDirection: 'row',
       }}
     >
-      <div style={{ width: '50%', padding: '2rem' }}>
+      <div style={{ width: '100%', padding: '2rem' }}>
          <h2 style={{ fontSize: '2.5rem' }}>
      <span style={{ color: 'red' }}>KASIREDDY</span> SRINADH REDDY</h2>
         <p style={{ fontSize: '1.2rem', marginTop: '1rem' }}>
-           a cybersecurity professional with a keen interest in ethical hacking, secure application development, and blockchain security. With a background in cloud security and penetration testing, I’m currently leading a team to develop a Decentralized Bug Bounty Program. I specialize in building secure smart contracts, ensuring robust encryption, and implementing cutting-edge technologies like zk-SNARKs and Chainlink. My goal is to create secure, transparent, and decentralized systems that empower users while addressing the ever-evolving landscape of cyber threats.
+           A cybersecurity learner with a keen interest in ethical hacking, secure application development, and blockchain security. With a background in cloud security and penetration testing, I’m currently leading a team to develop a Decentralized Bug Bounty Program. I specialize in building secure smart contracts, ensuring robust encryption, and implementing cutting-edge technologies like zk-SNARKs and Chainlink. My goal is to create secure, transparent, and decentralized systems that empower users while addressing the ever-evolving landscape of cyber threats.
         </p>
       </div>
 
-      <div style={{ width: '50%', height: '100%' }}>
+      <div style={{ width: '100%', height: '100%' }}>
         <Canvas camera={{ position: [0, 0, 5] }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[3, 2, 1]} />

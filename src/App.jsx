@@ -42,9 +42,9 @@ function App() {
           }}
         >
           <div style={{ flex: 1, paddingRight: "4vw" }}>
-            <h1 style={{ fontSize: "3rem", margin: 0 }}>KASIREDDY SRINADH REDDY </h1>
+            <h1 style={{ fontSize: "3rem", margin: 0 }}>YOUR  <span style={{ color: 'GOLD' }}>GOLDEN</span> SCOOP</h1>
             <p style={{ fontSize: "1.5rem", marginTop: "1rem" }}>
-              Creative Dev Cybersecurity Expert.
+              Creative  Cybersecurity  <span style={{ color: 'red' }}>TECHIE.</span>
             </p>
           </div>
 

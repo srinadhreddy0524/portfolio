@@ -24,7 +24,7 @@ function Experience() {
 
         <div style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ margin: 0 }}>Cybersecurity Intern @  INLIGHN TECH </h3>
+            <h3 style={{ margin: 0 }}>Cybersecurity Intern at INLIGHN TECH </h3>
             <p style={{ margin: "0.3rem 0", fontSize: "0.9rem", color: "#aaa" }}>
               May 2025 – Present
             </p>
