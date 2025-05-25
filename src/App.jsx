@@ -42,20 +42,20 @@ function App() {
           }}
         >
           <div style={{ flex: 1, paddingRight: "4vw" }}>
-            <h1 style={{ fontSize: "3rem", margin: 0 }}>Your Name</h1>
+            <h1 style={{ fontSize: "3rem", margin: 0 }}>KASIREDDY SRINADH REDDY </h1>
             <p style={{ fontSize: "1.5rem", marginTop: "1rem" }}>
-              Your Tagline or Role
+              Creative Dev Cybersecurity Expert.
             </p>
           </div>
 
-          <div style={{ flex: 1, height: "60vh" }}>
-            <Canvas style={{ height: "100%", width: "100%" }}>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[2, 5, 2]} intensity={1} />
-              <Profile3D />
-              <OrbitControls enableZoom={false} />
-            </Canvas>
-          </div>
+         <div style={{ flex: 1, height: '60vh' }}>
+          <Canvas style={{ height: '100%', width: '100%' }}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[2, 5, 2]} intensity={1} />
+            <Profile3D />
+            <OrbitControls enableZoom={false} />
+          </Canvas>
+        </div>
         </div>
       </div>
 
@@ -65,13 +65,14 @@ function App() {
       </section>
 
       {/* Experience Section */}
+      
       <section id="experience">
         <Experience />
       </section>
       <section id="projects">
         <Projects />
       </section>
-
+          
     </div>
   );
 }

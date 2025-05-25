@@ -1,26 +1,36 @@
-// components/Intro.jsx
-import React from "react";
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import MagnetSphere from './3D/MagnetSphere';
 
-function Intro() {
+export default function Intro() {
   return (
     <section
-      id="about"
+      id="intro"
       style={{
-        height: "100vh",
-        backgroundColor: "#1e1e1e",
-        color: "#ffffff",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: "0 10vw",
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
       }}
     >
-      <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>About Me</h2>
-      <p style={{ fontSize: "1.2rem", lineHeight: "1.7" }}>
-        Hello! I'm [Your Name], a passionate developer with a strong interest in cybersecurity, 3D web design, and blockchain technologies. I love building immersive digital experiences that solve real-world problems.
-      </p>
+      <div style={{ width: '50%', padding: '2rem' }}>
+         <h2 style={{ fontSize: '2.5rem' }}>
+     <span style={{ color: 'red' }}>KASIREDDY</span> SRINADH REDDY</h2>
+        <p style={{ fontSize: '1.2rem', marginTop: '1rem' }}>
+           a cybersecurity professional with a keen interest in ethical hacking, secure application development, and blockchain security. With a background in cloud security and penetration testing, I’m currently leading a team to develop a Decentralized Bug Bounty Program. I specialize in building secure smart contracts, ensuring robust encryption, and implementing cutting-edge technologies like zk-SNARKs and Chainlink. My goal is to create secure, transparent, and decentralized systems that empower users while addressing the ever-evolving landscape of cyber threats.
+        </p>
+      </div>
+
+      <div style={{ width: '50%', height: '100%' }}>
+        <Canvas camera={{ position: [0, 0, 5] }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[3, 2, 1]} />
+          <Suspense fallback={null}>
+            <MagnetSphere />
+          </Suspense>
+        </Canvas>
+      </div>
     </section>
   );
 }
-
-export default Intro;

@@ -8,9 +8,14 @@ const projectsList = [
     link: "https://github.com/yourusername/portfolio",
   },
   {
-    title: "Bug Bounty DApp",
-    description: "Decentralized bug bounty platform using Solidity and React.",
-    link: "https://github.com/yourusername/bug-bounty-dapp",
+    title: "Attendance calculator website ",
+    description: "Used Advanced JavaScript to create a web application that calculates student attendance.",
+    link: "https://github.com/srinadhreddy0524/attendance_calculator",
+  },
+   {
+    title: "Ecommerce Platform",
+    description: "Full-stack eCommerce application with React, Node.js, and MongoDB.",
+    link: "https://github.com/srinadhreddy0524/attendance_calculator",
   },
   // Add more projects here
 ];
@@ -28,7 +33,7 @@ export default function Projects() {
         padding: "0 10vw",
       }}
     >
-      <h2 style={{ marginBottom: "1.5rem" }}>Projects</h2>
+      <h2 style={{ marginBottom: "1.5rem",color:'red' }}>Projects</h2>
       {projectsList.map((project, i) => (
         <div
           key={i}
