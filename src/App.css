@@ -2,6 +2,7 @@
 html, body, #root {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -34,6 +35,17 @@ html, body, #root {
   .image-section {
     width: 100%;
     margin-top: 2rem;
+  }
+  .header,
+  .main-section {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 80%;
+    margin: auto;
   }
 }
 
