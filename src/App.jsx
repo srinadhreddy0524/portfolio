@@ -25,38 +25,42 @@ function App() {
       <div  id="profile"
         style={{
           minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "0 5vw",
-          boxSizing: "border-box",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "2rem",
+    boxSizing: "border-box",
         }}
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-            maxWidth: "1400px",
+             display: "flex",
+      flexDirection: window.innerWidth < 768 ? "column" : "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      width: "100%",
+      maxWidth: "1200px",
+      gap: "2rem",
           }}
         >
-          <div style={{ flex: 1, paddingRight: "4vw" }}>
-            <h1 style={{ fontSize: "3rem", margin: 0 }}>YOUR  <span style={{ color: 'GOLD' }}>GOLDEN</span> SCOOP</h1>
-            <p style={{ fontSize: "1.5rem", marginTop: "1rem" }}>
-              Creative  Cybersecurity  <span style={{ color: 'red' }}>TECHIE.</span>
-            </p>
-          </div>
+           <div style={{ flex: 1, textAlign: "left" }}>
+      <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+        YOUR <span style={{ color: "#FEBA17" }}>GOLDEN</span> SCOOP
+      </h1>
+      <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
+        Creative Cybersecurity <span style={{ color: "red" }}>TECHIE.</span>
+      </p>
+    </div>
 
-         <div style={{ flex: 1, height: '60vh' }}>
-          <Canvas style={{ height: '100%', width: '100%' }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[2, 5, 2]} intensity={1} />
-            <Profile3D />
-            <OrbitControls enableZoom={false} />
-          </Canvas>
-        </div>
+    {/* 3D Canvas Block */}
+    <div style={{ flex: 1, width: "100%", maxWidth: "600px", height: "60vh" }}>
+      <Canvas style={{ height: "100%", width: "100%" }}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[2, 5, 2]} intensity={1} />
+        <Profile3D />
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+    </div>
         </div>
       </div>
 
