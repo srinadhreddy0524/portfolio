@@ -6,6 +6,7 @@ function FloatingContact() {
 
   useEffect(() => {
     const introEl = document.getElementById("intro");
+    const EXPEl = document.getElementById("experience");
     const projectsEl = document.getElementById("projects");
 
     const observer = new IntersectionObserver(
