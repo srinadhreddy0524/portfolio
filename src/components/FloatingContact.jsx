@@ -4,32 +4,34 @@ function FloatingContact() {
   const [expanded, setExpanded] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const introEl = document.getElementById("intro");
-    const EXPEl = document.getElementById("experience");
-    const projectsEl = document.getElementById("projects");
+useEffect(() => {
+  const introEl = document.getElementById("intro");
+  const expEl = document.getElementById("experience");
+  const projectsEl = document.getElementById("projects");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let isVisible = false;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            isVisible = true;
-          }
-        });
-        setVisible(isVisible);
-      },
-      { threshold: 0.1 }
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let show = false;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          show = true;
+        }
+      });
+      setVisible(show);
+    },
+    { threshold: 0.1 }
+  );
 
-    if (introEl) observer.observe(introEl);
-    if (projectsEl) observer.observe(projectsEl);
+  if (introEl) observer.observe(introEl);
+  if (expEl) observer.observe(expEl);
+  if (projectsEl) observer.observe(projectsEl);
 
-    return () => {
-      if (introEl) observer.unobserve(introEl);
-      if (projectsEl) observer.unobserve(projectsEl);
-    };
-  }, []);
+  return () => {
+    if (introEl) observer.unobserve(introEl);
+    if (expEl) observer.unobserve(expEl);
+    if (projectsEl) observer.unobserve(projectsEl);
+  };
+}, []);
 
   return (
     <div
