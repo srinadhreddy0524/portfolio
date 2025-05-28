@@ -20,13 +20,15 @@ function HeaderMenu() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "0 2rem",
+        padding: "0 1rem",
         zIndex: 1000,
         backdropFilter: "blur(10px)",
+        overflowX: "auto", // Prevent breakage
+        whiteSpace: "nowrap", // Prevent wrapping
       }}
     >
       {/* Navigation Buttons */}
-      <nav style={{ display: "flex", gap: "2rem" }}>
+      <nav style={{ display: "flex", gap: "0.5rem" }}>
         {["profile", "intro", "experience", "projects"].map((section) => (
           <button
             key={section}
@@ -34,12 +36,13 @@ function HeaderMenu() {
             style={{
               background: "transparent",
               border: "none",
-              borderRadius: "4px",
-              padding: "0.5rem 1rem",
+              padding: "0.4rem 0.6rem",
               color: "#f0f0f0",
               cursor: "pointer",
               fontWeight: "bold",
+              fontSize: "0.9rem",
               transition: "color 0.3s ease",
+              whiteSpace: "nowrap",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#f0f0f0")}
@@ -48,43 +51,6 @@ function HeaderMenu() {
           </button>
         ))}
       </nav>
-
-      {/* Contact Buttons */}
-      <div style={{ display: "flex", gap: "1rem" }}>
-        <a
-          href="mailto:srinadhreddy0524@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "#f0f0f0",
-            textDecoration: "none",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "color 0.3s ease",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "#f0f0f0")}
-        >
-          Gmail
-        </a>
-
-        <a
-          href="www.linkedin.com/in/srinadh-reddy-kasireddy-b6ab62328"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "#f0f0f0",
-            textDecoration: "none",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "color 0.3s ease",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "#f0f0f0")}
-        >
-          LinkedIn
-        </a>
-      </div>
     </header>
   );
 }

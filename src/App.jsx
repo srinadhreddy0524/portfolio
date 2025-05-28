@@ -5,7 +5,8 @@ import Profile3D from "./components/Profile3D";
 import Intro from "./components/Intro";
 import Experience from "./components/Experience"; 
 import HeaderMenu from "./components/HeaderMenu";
-import Projects from "./components/Projects";// ✅ NEW
+import Projects from "./components/Projects";
+import FloatingContact from './components/FloatingContact';// ✅ NEW
 
 
 function App() {
@@ -77,6 +78,16 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
+       <div>
+      {/* Sections */}
+      <div id="profile"></div>
+      <div id="intro"></div>
+      <div id="experience"></div>
+      <div id="projects"></div>
+
+      {/* Floating Contact Menu */}
+      <FloatingContact />
+    </div>
           
     </div>
   );
