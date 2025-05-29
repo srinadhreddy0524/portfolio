@@ -15,7 +15,7 @@ const projectsList = [
    {
     title: "Ecommerce Platform",
     description: "Full-stack eCommerce application with React, Node.js, and MongoDB.",
-    link: "https://github.com/srinadhreddy0524/attendance_calculator",
+    link: "https://github.com/srinadhreddy0524/basic_ecommerce_website",
   },
   // Add more projects here
 ];
