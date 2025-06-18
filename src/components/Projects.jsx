@@ -17,6 +17,16 @@ const projectsList = [
     description: "Full-stack eCommerce application with React, Node.js, and MongoDB.",
     link: "https://github.com/srinadhreddy0524/basic_ecommerce_website",
   },
+    {
+    title: "Subdomain Enumeration Tool",
+    description: "Developed a tool for subdomain enumeration using Python using DNS.resolver ,Requests and threading libraries .",
+    link: "https://github.com/srinadhreddy0524/subdomain",
+  },
+  {
+    title: "PDF-Protection-Tool",
+    description: "Developed a tool  to protect PDF files using Python, allowing users to set passwords and restrict access.",
+    link: "https://github.com/srinadhreddy0524/PDF-Protection-Tool",
+  },
   // Add more projects here
 ];
 
