@@ -34,7 +34,7 @@ export default function Projects() {
   return (
     <div
       style={{
-    height: "100vh",
+        minHeight: "100vh",
         backgroundColor: "#181818",
         color: "#f0f0f0",
         display: "flex",
