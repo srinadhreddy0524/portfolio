@@ -17,7 +17,7 @@ const projectsList = [
     description: "Full-stack eCommerce application with React, Node.js, and MongoDB.",
     link: "https://github.com/srinadhreddy0524/basic_ecommerce_website",
   },
-    {
+  {
     title: "Subdomain Enumeration Tool",
     description: "Developed a tool for subdomain enumeration using Python using DNS.resolver ,Requests and threading libraries .",
     link: "https://github.com/srinadhreddy0524/subdomain",
@@ -27,6 +27,7 @@ const projectsList = [
     description: "Developed a tool  to protect PDF files using Python, allowing users to set passwords and restrict access.",
     link: "https://github.com/srinadhreddy0524/PDF-Protection-Tool",
   },
+  
   // Add more projects here
 ];
 
@@ -34,7 +35,7 @@ export default function Projects() {
   return (
     <div
       style={{
-        minHeight: "100vh",
+       minHeight: "100vh",
         backgroundColor: "#181818",
         color: "#f0f0f0",
         display: "flex",
@@ -52,7 +53,17 @@ export default function Projects() {
             padding: "1rem",
             backgroundColor: "rgba(255, 255, 255, 0.05)",
             borderRadius: "8px",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            cursor: "pointer",
           }}
+          onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-5px)";
+           e.currentTarget.style.boxShadow = "0 10px 20px rgba(0,0,0,0.3)";
+       }}
+          onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
         >
           <h3>{project.title}</h3>
           <p>{project.description}</p>
@@ -65,6 +76,7 @@ export default function Projects() {
             View on GitHub
           </a>
         </div>
+        
       ))}
     </div>
   );
