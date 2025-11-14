@@ -7,9 +7,9 @@ import Experience from "./components/Experience";
 import HeaderMenu from "./components/HeaderMenu";
 import Projects from "./components/Projects";
 import FloatingContact from './components/FloatingContact';// ✅ NEW
-import CTA from "src/components/CTA.jsx";
-import Certifications from "src/components/Certifications.jsx";
-import Blog from "src/components/Blog.jsx";
+import CTA from "./components/CTA.jsx";
+import Certifications from "./components/Certifications.jsx";
+import Blog from "./components/Blog.jsx";
 
 // and add <Certifications/> and <CTA resumeUrl="/resume.pdf" /> where you want them.
 
