@@ -1,8 +1,8 @@
 // src/components/CTA.jsx
 import React from "react";
 
-export default function CTA({ resumeUrl = "/resume.pdf" }) {
-  // JS fallback to force download (useful if browser opens PDF inline)
+
+export default function CTA({ resumeUrl = "public/resume.pdf" }) {
   const forceDownload = async (url, filename = "Srinadh_Reddy_Resume.pdf") => {
     try {
       const res = await fetch(url, { cache: "no-store" });
