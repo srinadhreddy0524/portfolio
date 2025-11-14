@@ -67,6 +67,7 @@ useEffect(() => {
           alignItems: "left",
         }}
       >
+        
         <a
           href="mailto:srinadhreddy0524@gmail.com"
           target="_blank"
@@ -133,6 +134,7 @@ useEffect(() => {
       >
         {expanded ? "×" : "@"}
       </button>
+      
     </div>
   );
 }

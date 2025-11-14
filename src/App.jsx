@@ -7,6 +7,12 @@ import Experience from "./components/Experience";
 import HeaderMenu from "./components/HeaderMenu";
 import Projects from "./components/Projects";
 import FloatingContact from './components/FloatingContact';// ✅ NEW
+import CTA from "/Users/srinadhreddy/Documents/portfolio/src/components/CTA.jsx";
+import Certifications from "/Users/srinadhreddy/Documents/portfolio/src/components/Certifications.jsx";
+import Blog from "/Users/srinadhreddy/Documents/portfolio/src/components/Blog.jsx";
+
+// and add <Certifications/> and <CTA resumeUrl="/resume.pdf" /> where you want them.
+
 
 
 function App() {
@@ -69,6 +75,7 @@ function App() {
       <section id="intro" >
         <Intro />
       </section>
+      <Certifications/>
 
       {/* Experience Section */}
       
@@ -77,13 +84,22 @@ function App() {
       </section>
       <section id="projects">
         <Projects />
+       <section id="blog">
+        <Blog />
+      </section>  
+        <section id="Resume"> <CTA resumeUrl="/resume.pdf" /></section>
+
       </section>
        <div>
+      
       {/* Sections */}
       <div id="profile"></div>
       <div id="intro"></div>
       <div id="experience"></div>
       <div id="projects"></div>
+      <div id="Resume"></div>
+      <div id="blog"></div>
+
 
       {/* Floating Contact Menu */}
       <FloatingContact />

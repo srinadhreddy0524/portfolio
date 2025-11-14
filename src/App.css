@@ -1,4 +1,4 @@
-/* src/index.css or App.css */
+
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -48,5 +48,76 @@ html, body, #root {
     margin: auto;
   }
 }
+/* ---------- Layout container used by all sections ---------- */
+.section-wrapper {
+  width: 100%;
+  max-width: 1200px; /* central content width */
+  margin: 0 auto;    /* center horizontally */
+  padding: 0 5vw;    /* match left + right gutters */
+  box-sizing: border-box;
+}
+
+/* Helpful inner layout utility */
+.row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Make row stack on small screens */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start; /* keep left alignment */
+    gap: 1rem;
+  }
+
+  /* smaller headings on mobile */
+  .section-wrapper h2,
+  .section-wrapper h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Optional: consistent section spacing */
+.section {
+  padding: 3.5rem 0;
+}
+
+/* Utility for headings to ensure consistent left offset */
+.section h2,
+.section h1 {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+/* Canvas / 3D container sizing */
+.canvas-box {
+  width: 100%;
+  max-width: 600px;
+  height: 60vh;
+  min-height: 260px;
+}
+
+/* Ensure content within wrapper is left-aligned by default */
+.section-wrapper .left {
+  text-align: left;
+}
+
+/* Small visual nicety for project cards */
+.project-card {
+  margin-bottom: 1.6rem;
+  padding: 1.1rem;
+  background-color: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
 
 

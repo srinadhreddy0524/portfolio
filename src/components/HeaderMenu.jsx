@@ -1,12 +1,12 @@
 import React from "react";
 
-function HeaderMenu() {
+export default function HeaderMenu() {
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+
+  const items = ["profile", "intro", "experience", "projects", "certifications","blog"];
 
   return (
     <header
@@ -15,44 +15,58 @@ function HeaderMenu() {
         top: 0,
         left: 0,
         right: 0,
-        height: "60px",
-        backgroundColor: "rgba(18, 18, 18, 0.85)",
+        height: 60,
+        backgroundColor: "rgba(18,18,18,0.85)",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0 1rem",
-        zIndex: 1000,
+        zIndex: 1200,
         backdropFilter: "blur(10px)",
-        overflowX: "auto", // Prevent breakage
-        whiteSpace: "nowrap", // Prevent wrapping
+        whiteSpace: "nowrap",
+        overflowX: "auto",
       }}
     >
-      {/* Navigation Buttons */}
-      <nav style={{ display: "flex", gap: "0.5rem" }}>
-        {["profile", "intro", "experience", "projects"].map((section) => (
+      <nav style={{ display: "flex", gap: "0.8rem", alignItems: "center" }}>
+        {items.map((s) => (
           <button
-            key={section}
-            onClick={() => scrollToSection(section)}
+            key={s}
+            onClick={() => scrollToSection(s)}
             style={{
               background: "transparent",
               border: "none",
-              padding: "0.4rem 0.6rem",
               color: "#f0f0f0",
+              padding: "0.4rem 0.6rem",
               cursor: "pointer",
-              fontWeight: "bold",
-              fontSize: "0.9rem",
-              transition: "color 0.3s ease",
-              whiteSpace: "nowrap",
+              fontWeight: 700,
+              fontSize: 14,
+              transition: "color .22s",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#f0f0f0")}
           >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
+            {s.charAt(0).toUpperCase() + s.slice(1)}
           </button>
         ))}
       </nav>
+
+      <div style={{ display: "flex", gap: "0.6rem", alignItems: "center" }}>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            color: "#f0f0f0",
+            textDecoration: "none",
+            fontWeight: 700,
+            padding: "0.35rem 0.6rem",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#f0f0f0")}
+        >
+          Resume
+        </a>
+      </div>
     </header>
   );
 }
-
-export default HeaderMenu;
