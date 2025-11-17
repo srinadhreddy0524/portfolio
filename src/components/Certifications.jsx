@@ -5,7 +5,8 @@ export default function Certifications() {
   const certs = [
     { title: "CCNA Network Essentials", issuer: "UDEMY", year: 2025, link: "https://drive.google.com/file/d/1uZ5pWI9gF4pYojuAaCDzBLQCzjzlvuCC/view?usp=share_link" },
     { title: "Ethical Hacking", issuer: "UDEMY", year: 2025, link: "https://drive.google.com/file/d/12CdEcIJ263k7ln0EOLVbnKH9iimoeC6h/view?usp=sharing" },
-    { title: "Cyber Security Analyst job ", issuer: "TATA", year: 2025, link: "https://drive.google.com/file/d/1MCg8d1ZTxQg8B_nJ78QvxUHvm-X1sX7e/view?usp=sharing" }
+    { title: "Cyber Security Analyst job ", issuer: "TATA", year: 2025, link: "https://drive.google.com/file/d/1MCg8d1ZTxQg8B_nJ78QvxUHvm-X1sX7e/view?usp=sharing" },
+    { title: "Cyber job simulation ", issuer: "DELOITTE", year: 2025, link: "https://drive.google.com/file/d/1rjqFHsnwWDhUrDj576EYREaVjeHXHh__/view?usp=sharing" }
   ];
 
   return (
